@@ -232,7 +232,7 @@ interface MeetingLinkProps {
 }
 
 function MeetingLink({ call }: MeetingLinkProps) {
-  const meetingLink = `/meeting/${call.id}`;
+  const meetingLink = `${process.env.NEXT_PRODUCTION_BASE_URL}/meeting/${call.id}`;
 
   return (
     <div className="flex flex-col items-center gap-3 text-center">
